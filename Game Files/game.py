@@ -21,7 +21,8 @@ Start_Screen = """
     + [1]: START
     + [2]: HELP
     + [3]: CREDITS
-    + [4]: QUIT
+    + [4]: ENTER CODE
+    + [5]: QUIT
 \n"""
 Input = "> "
 Invalid = "[Unrecognised Action]\n"
@@ -56,6 +57,7 @@ def display_credits():
 |       CREDITS       |
 #---------------------#
 
+[Github]: https://github.com/BenitzCoding/The-Command-Line
 [License]: MIT
 [Owner]: Benitz Original
 [Discord]: Benitz Original#1317
@@ -81,6 +83,22 @@ sentences that means the same thing but say it differently.
 \n""")
     input("[ENTER TO CONTINUE]\n> ")
 
+def enter_code():
+    code = input("""
+#----------------------#
+|      ENTER CODE      |
+#----------------------#
+\n> """)
+
+    if code == "HypeAllTheWay":
+        print("This game is still in progress, if you know this code, then you probably are a Python Developer or you got this code from the owner. No matter What it is, you should star and watch this game in the github page, anyway have a nice day!\n\nhttps://github.com/BenitzCoding/The-Command-Line")
+        input("\n[ENTER TO CONTINUE]\n> ")
+
+    elif code == "secrets...":
+        print("This is neither a horror game nor a story telling game. It's just a command line, tell a good tale to live another day to tell another tale. Mess up a interesting game and fall to your voided death.\n\nRoses are dead, violets are dying, Survive the night, but will one day meet death.")
+        print(Style.BRIGHT + Fore.RED + "\n[ENTER TO CONTINUE]")
+        input("> ")
+
 def on_start():
     os.system("cls")
     try:
@@ -102,7 +120,15 @@ def on_start():
 
         elif user_input == 4:
             os.system("cls")
+            enter_code()
+            on_start()
+
+        elif user_input == 5:
+            os.system("cls")
             return "Exit"
+
+        else:
+            print("[INVALID OPTION ENTER TO CONTINUE]\n> ")
     except:
         os.system("cls")
         on_start()
