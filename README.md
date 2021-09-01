@@ -1,2 +1,4 @@
-# The-Command-Line
-A command line game that gives you tasks for you to complete in creative ways!
+# The Command Line
+
+This is a game where you have to finish tasks in really creative ways by writing it in the command line.
+> Note that this game is still work in progress. Therefore we don't have screenshot to show the gameplay.
